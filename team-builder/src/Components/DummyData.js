@@ -21,6 +21,13 @@ const charaters = [
         title: 'God of War',
         species: 'Demigod',
         id: uuid()
+    },
+    {
+        name: 'Ken Kaneki',
+        from: 'Book',
+        title: 'Tokyo Ghoul',
+        species: 'One-Eyed Ghoul',
+        id: uuid()
     }
 ]
 
