@@ -1,54 +1,26 @@
+import { v4 as uuid } from 'uuid';
+
 const charaters = [
     {
-        MainCharacters: [
-            {
-                name: "Kyo Sohma",
-                from: "Book",
-                first_apperance: "Fruits Basket",
-                type: "Human",
-                abilities: ["Change into cat", "Communicate with cats", "Martial arts"]
-            },
-            {
-                name: "Mario",
-                from: "Game",
-                first_apperance: "Donkey Kong",
-                type: "Human",
-                abiliteis: ["Jumping", "Utilizing power ups"]
-            }
-        ]
+        name: 'Kyo Sohma',
+        from: 'Book',
+        title: 'Fruits Basket',
+        species: 'Human',
+        id: uuid()
     },
     {
-        SecondaryCharacters: [
-            {
-                name: "Saki Hanajima",
-                from: "Book",
-                first_apperance: "Fruits Basket",
-                type: "Human",
-                abiliteis: ["Striking fear in peers", "Wave interpretation and manipulation"]
-            }
-        ]
+        name: 'Jak',
+        from: 'Game',
+        title: 'Jak and Daxter',
+        species: 'Human',
+        id: uuid()
     },
     {
-        Creatures: [
-            {
-                name: "Bowser",
-                from: "Comic",
-                first_apperance: "Let's Play",
-                type: "Dog",
-                abiliteis: ["Looking cute", "Protecting human", "Providing support"]
-            }
-        ]
-    },
-    {
-        BooksMoives: [
-            {
-                name: "The Immortals",
-                from: "Alson Noel",
-                first_apperance: "Evermore",
-                type: "Book",
-                key_points: ["Easy read", "Short chapters", "Relatable Characters"]
-            }
-        ]
+        name: 'Krato',
+        from: 'Game',
+        title: 'God of War',
+        species: 'Demigod',
+        id: uuid()
     }
 ]
 

@@ -1,18 +1,29 @@
 import React, {useState} from 'react';
+import { v4 as uuid } from 'uuid';
 import './App.css';
-import characters from "./Components/DummyData";
+import Card from "./Components/Card";
+import Characters from "./Components/DummyData";
+
+
+const initialFormValues = {
+  name: '',
+  from: '',
+  title: '',
+//^^^^ dropdown
+  species: '',
+}
 
 function App() {
-  const [mainCharacters, setMainCharacters] = useState(characters[0]);
-  const [secondChara, setSecondChara] = useState(characters[1]);
-  const [creatures, setCreatures] = useState(characters[2]);
-  const [booksMoives, setBooksMovies] = useState(characters[3]);
+  const [characters, setCharacters] = useState(Characters);
+  const [formValues, setFormValues] = useState(initialFormValues);
+
   return (
     <div className="App">
       <header>
-        <h1></h1>
-
+        <h1>Add YOUR favorites!!</h1>
       </header>
+      <div>Form</div>
+      <Card/>
     </div>
   );
 }
