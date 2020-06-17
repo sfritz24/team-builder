@@ -4,7 +4,7 @@ import CharacterCard from './Character';
 function Card(props) {
     const {characters} = props
     return (
-        <div>
+        <div className='cardContainer'>
             {
                 characters.map(character =>{
                     return(

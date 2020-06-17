@@ -8,7 +8,7 @@ function CharacterCard(props){
     }
 
     return(
-        <div>
+        <div className='characterCard'>
             <h2>{details.name}</h2>
             <p>From a {details.from} called {details.title}</p>
             <p>{details.name} is a {details.species}</p>

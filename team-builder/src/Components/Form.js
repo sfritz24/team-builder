@@ -1,26 +1,28 @@
 import React from 'react';
 
 function Form(props){
-    const {values} = props
+    const {values, onSubmit, onInputChange} = props
 
     return(
-        <form>
+        <form className='characterForm' onSubmit={onSubmit}>
             <div>
                 <h2>Add a Character</h2>
             </div>
-            <div>
+            <div className='form'>
                 <h2>Information:</h2>
-                <lable>Name:&nbsp;
+                <label>Name:&nbsp;
                     <input
                     type='text'
                     name='name'
                     value={values.name}
+                    onChange={onInputChange}
                     />
-                </lable>From:&nbsp;
-                <lable>
+                </label>
+                <label>From:&nbsp;
                     <select
                     name='from'
                     value={values.from}
+                    onChange={onInputChange}
                     >
                         <option value=''>-- Please Select an Option</option>
                         <option value='Book'>Book</option>
@@ -28,21 +30,26 @@ function Form(props){
                         <option value='Show'>Show</option>
                         <option value='Game'>Game</option>
                     </select>
-                </lable>
-                <lable>Title:&nbsp;
+                </label>
+                <label>Title:&nbsp;
                     <input
                     type='text'
                     name='title'
                     value={values.title}
+                    onChange={onInputChange}
                     />
-                </lable>
-                <label>
+                </label>
+                <label>Species:&nbsp;
                     <input
                     type='text'
                     name='species'
                     value={values.species}
+                    onChange={onInputChange}
                     />
                 </label>
+            </div>
+            <div>
+                <button>Submit</button>
             </div>
         </form>
     )

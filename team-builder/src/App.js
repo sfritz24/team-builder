@@ -18,12 +18,27 @@ function App() {
   const [characters, setCharacters] = useState(Characters);
   const [formValues, setFormValues] = useState(initialFormValues);
 
+  const onSubmit = event =>{
+    event.preventDefault()
+    if(!formValues.name || !formValues.from || !formValues.title || !formValues.species){
+      return
+    }
+    const newCharacter = {...formValues, id: uuid()}
+    setCharacters([newCharacter, ...characters])
+    setFormValues(initialFormValues)
+  }
+
+  const onInputChange = event =>{
+    const {name, value} = event.target
+    setFormValues({...formValues, [name]: value})
+  }
+
   return (
     <div className="App">
       <header>
         <h1>Add YOUR favorites!!</h1>
       </header>
-      <div>Form</div>
+      <Form values={formValues} onSubmit={onSubmit} onInputChange={onInputChange}/>
       <Card characters={characters}/>
     </div>
   );
